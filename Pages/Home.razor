@@ -1,64 +1,161 @@
 @page "/"
-<PageTitle>Privacy Policy - HydroTrack</PageTitle>
+<PageTitle>Privacy Policy - Androma Galaxy Games</PageTitle>
 
 <div class="privacy-container">
-    <h1>Privacy Policy</h1>
-    <p class="last-updated">Last Updated: September 2026</p>
-
-    <div class="policy-section">
-        <h2>1. Introduction</h2>
-        <p>Welcome to <strong>HydroTrack</strong>, built by Androma Galaxy Games Studio. We believe in absolute privacy. Our app is designed to help you track your hydration offline, with zero invasive tracking.</p>
+    <div class="header-section">
+        <h1 class="gradient-text">Privacy Policy</h1>
+        <p class="subtitle">Effective Date: September 2026</p>
     </div>
 
-    <div class="policy-section">
-        <h2>2. Data Collection & Storage</h2>
-        <p>HydroTrack operates on an <strong>Offline-First</strong> basis. All of your personal health data (including Name, Height, Weight, and Water Logs) is stored entirely locally on your device's internal SQLite database. We do not sell, rent, or share your health data with any third parties.</p>
-    </div>
+    <div class="card-section">
+        <div class="policy-card">
+            <div class="card-icon">🛡️</div>
+            <div class="card-content">
+                <h2>1. Introduction</h2>
+                <p>Welcome to <strong>HydroTrack</strong>, developed by <strong>Androma Galaxy Games Studio</strong>. We believe in absolute digital privacy. Our application is architected from the ground up to help you track your hydration offline, entirely free from invasive tracking algorithms.</p>
+            </div>
+        </div>
 
-    <div class="policy-section">
-        <h2>3. Anonymous Crash Reporting</h2>
-        <p>To improve app stability, we collect anonymous crash logs. This data contains a randomly generated 8-character ID, your device model (e.g., Pixel 7), and the error message. It contains absolutely zero Personally Identifiable Information (PII) or health data.</p>
-    </div>
+        <div class="policy-card">
+            <div class="card-icon">💾</div>
+            <div class="card-content">
+                <h2>2. Data Collection & Storage</h2>
+                <p>HydroTrack operates on a strict <strong>Offline-First</strong> basis. All of your personal health metrics (including Name, Height, Weight, and Logged Water) are stored locally on your device's internal encrypted database. We do not sell, rent, or transmit your health data to any external marketing or analytics agencies.</p>
+            </div>
+        </div>
 
-    <div class="policy-section">
-        <h2>4. Cloud Sync (Future Features)</h2>
-        <p>If you choose to use our upcoming cross-device Cloud Sync feature, your data will be securely transmitted and stored in our encrypted Supabase database, linked only to your anonymous ID.</p>
-    </div>
+        <div class="policy-card">
+            <div class="card-icon">📊</div>
+            <div class="card-content">
+                <h2>3. Anonymous Telemetry</h2>
+                <p>To ensure application stability and rapid bug fixing, we collect 100% anonymous crash logs. This diagnostic data contains a randomly generated 8-character device ID, your hardware model (e.g., Pixel 7), and the technical error stack trace. It contains absolutely zero Personally Identifiable Information (PII) or health data.</p>
+            </div>
+        </div>
 
-    <div class="policy-section">
-        <h2>5. Contact Us</h2>
-        <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
-        <p><strong>Email:</strong> support@andromagalaxygames.com</p>
+        <div class="policy-card">
+            <div class="card-icon">☁️</div>
+            <div class="card-content">
+                <h2>4. Cloud Sync (Future Features)</h2>
+                <p>If you explicitly opt-in to our upcoming cross-device Cloud Sync feature, your data will be securely transmitted and stored in our encrypted Supabase infrastructure, linked only to your anonymous ID for synchronization purposes.</p>
+            </div>
+        </div>
+
+        <div class="policy-card">
+            <div class="card-icon">✉️</div>
+            <div class="card-content">
+                <h2>5. Contact Us</h2>
+                <p>If you have any questions or concerns regarding our privacy practices, please reach out to our support team:</p>
+                <a href="mailto:support@andromagalaxygames.com" class="contact-button">support@andromagalaxygames.com</a>
+            </div>
+        </div>
     </div>
 </div>
 
 <style>
+    /* Professional Dark Theme */
+    body {
+        background-color: #050A14 !important; /* Deep space navy */
+        color: #E0E1DD !important;
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
     .privacy-container {
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto;
-        padding: 2rem;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #0D1B2A;
+        padding: 40px 20px;
     }
-    h1 {
-        color: #0077B6;
+
+    .header-section {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .gradient-text {
+        font-size: 3.5rem;
+        font-weight: 800;
+        background: linear-gradient(90deg, #00B4D8, #90E0EF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        color: #778DA9;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .card-section {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .policy-card {
+        background: #0D1B2A;
+        border: 1px solid #1B263B;
+        border-radius: 12px;
+        padding: 30px;
+        display: flex;
+        gap: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .policy-card:hover {
+        transform: translateY(-5px);
+        border-color: #00B4D8;
+    }
+
+    .card-icon {
         font-size: 2.5rem;
-        border-bottom: 3px solid #00B4D8;
-        padding-bottom: 10px;
+        flex-shrink: 0;
+        padding-top: 5px;
     }
-    .last-updated {
-        font-style: italic;
-        color: #555;
-    }
-    .policy-section {
-        margin-top: 2rem;
-    }
-    h2 {
+
+    .card-content h2 {
         color: #00B4D8;
         font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: 600;
     }
-    p {
-        line-height: 1.6;
-        font-size: 1.1rem;
+
+    .card-content p {
+        line-height: 1.7;
+        font-size: 1.05rem;
+        color: #A9B4C2;
+        margin: 0;
+    }
+
+    .contact-button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 24px;
+        background-color: transparent;
+        color: #00B4D8;
+        border: 2px solid #00B4D8;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .contact-button:hover {
+        background-color: #00B4D8;
+        color: #050A14;
+    }
+
+    @media (max-width: 768px) {
+        .policy-card {
+            flex-direction: column;
+            gap: 15px;
+        }
+        .card-icon {
+            font-size: 2rem;
+        }
+        .gradient-text {
+            font-size: 2.5rem;
+        }
     }
 </style>
