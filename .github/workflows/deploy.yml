@@ -1,0 +1,35 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ master, main ]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Setup .NET 10
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '10.0.x'
+
+    - name: Publish Blazor WebAssembly
+      run: dotnet publish -c Release -o release --nologo
+
+    - name: Fix Base Href for GitHub Pages
+      run: sed -i 's/<base href="\/" \/>/<base href="\/${{ github.event.repository.name }}\/" \/>/g' release/wwwroot/index.html
+
+    - name: Add .nojekyll file
+      run: touch release/wwwroot/.nojekyll
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: release/wwwroot
