@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Androma Galaxy Games</title>
+    <base href="/AndromaGalaxyWeb/" />
+    <link href="_framework/dotnet.n2acgnpqyq.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-AWYD6MRB2pGoaBBa7Y324Z4H56bkZKHIQDh5WT4oH9o=" />
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="AndromaGalaxyWeb.styles.css" rel="stylesheet" />
+    <script type="importmap">{
+  "imports": {
+    "./_framework/blazor.webassembly.js": "./_framework/blazor.webassembly.w3qd1tpl0e.js",
+    "./_framework/dotnet.js": "./_framework/dotnet.n2acgnpqyq.js",
+    "./_framework/dotnet.native.js": "./_framework/dotnet.native.b6l13xorvf.js",
+    "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.v06hirbjsv.js"
+  },
+  "scopes": {},
+  "integrity": {
+    "./_framework/blazor.webassembly.js": "sha256-lDXsDYFgm62F+YUvxES7IOTCXYpiHpU3uR45YdC6mq4=",
+    "./_framework/blazor.webassembly.w3qd1tpl0e.js": "sha256-lDXsDYFgm62F+YUvxES7IOTCXYpiHpU3uR45YdC6mq4=",
+    "./_framework/dotnet.js": "sha256-AWYD6MRB2pGoaBBa7Y324Z4H56bkZKHIQDh5WT4oH9o=",
+    "./_framework/dotnet.n2acgnpqyq.js": "sha256-AWYD6MRB2pGoaBBa7Y324Z4H56bkZKHIQDh5WT4oH9o=",
+    "./_framework/dotnet.native.b6l13xorvf.js": "sha256-jZddobLBM2C3lQhYQ61xSQJ/WqD3eQCO3RzoHGaOjx0=",
+    "./_framework/dotnet.native.js": "sha256-jZddobLBM2C3lQhYQ61xSQJ/WqD3eQCO3RzoHGaOjx0=",
+    "./_framework/dotnet.runtime.js": "sha256-QbnqrZGHtGq7wudS17/AYEPpH9JkphrsyVllD6JHmds=",
+    "./_framework/dotnet.runtime.v06hirbjsv.js": "sha256-QbnqrZGHtGq7wudS17/AYEPpH9JkphrsyVllD6JHmds="
+  }
+}</script>
+    <style>
+        /* Professional Custom Loading Screen */
+        body { background-color: #050A14; margin: 0; }
+        .studio-loader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #E0E1DD;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: #050A14;
+        }
+        .neon-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(0, 180, 216, 0.1);
+            border-top: 4px solid #00B4D8;
+            border-radius: 50%;
+            animation: spin 1s linear infinite, glow 2s ease-in-out infinite alternate;
+            margin-bottom: 25px;
+        }
+        .studio-loader h2 {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            font-weight: 300;
+            color: #00B4D8;
+            margin: 0;
+            animation: pulse 2s infinite alternate;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes glow {
+            from { box-shadow: 0 0 10px rgba(0, 180, 216, 0.2); }
+            to { box-shadow: 0 0 20px rgba(0, 180, 216, 0.8), 0 0 40px rgba(0, 180, 216, 0.4); }
+        }
+        @keyframes pulse { from { opacity: 0.6; } to { opacity: 1; } }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="studio-loader">
+            <div class="neon-spinner"></div>
+            <h2>ANDROMA GALAXY</h2>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="." class="reload">Reload</a>
+        <span class="dismiss">🗙</span>
+    </div>
+    <script src="_framework/blazor.webassembly.w3qd1tpl0e.js"></script>
+</body>
+
+</html>
